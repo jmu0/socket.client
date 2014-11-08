@@ -1,0 +1,1 @@
+ctags --langmap=c++:.ino -R --C++-kinds=+lp --C-kinds=+l --fields=+ianS --extra=+q

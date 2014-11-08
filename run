@@ -1,0 +1,10 @@
+#!/bin/bash
+#export BOARD=atmega328
+#export SERIALDEV=/dev/ttyUSB0
+export BOARD=leonardo
+export SERIALDEV=/dev/ttyACM0
+echo "Board: $BOARD, Serial port: $SERIALDEV"
+make
+#stty -F /dev/ttyACM0 speed 1200
+#sleep 1
+make upload

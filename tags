@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL := all$/;"	m
+AR	Makefile	/^AR := $(call findsoftware,avr-ar)$/;"	m
+ARDUINOCONST	Makefile	/^ARDUINOCONST ?= 100$/;"	m
+ARDUINOCOREDIR	Makefile	/^ARDUINOCOREDIR := $(ARDUINODIR)\/hardware\/arduino\/cores\/arduino$/;"	m
+ARDUINODIR	Makefile	/^ARDUINODIR := $(firstword $(wildcard ~\/opt\/arduino \/usr\/share\/arduino))$/;"	m
+ARDUINOLIB	Makefile	/^ARDUINOLIB := .lib\/arduino.a$/;"	m
+ARDUINOLIBOBJS	Makefile	/^ARDUINOLIBOBJS := $(foreach dir, $(ARDUINOCOREDIR) $(LIBRARYDIRS), \\$/;"	m
+AVRDUDE	Makefile	/^AVRDUDE := $(call findsoftware,avrdude)$/;"	m
+AVRDUDECONF	Makefile	/^AVRDUDECONF := $(ARDUINODIR)\/hardware\/tools\/avr\/etc\/avrdude.conf$/;"	m
+AVRDUDECONF	Makefile	/^AVRDUDECONF := $(wildcard $(AVRDUDE).conf)$/;"	m
+AVRSIZE	Makefile	/^AVRSIZE := $(call findsoftware,avr-size)$/;"	m
+AVRTOOLSPATH	Makefile	/^AVRTOOLSPATH ?= $(subst :, , $(PATH)) $(ARDUINODIR)\/hardware\/tools \\$/;"	m
+BOARDS_FILE	Makefile	/^BOARDS_FILE := $(ARDUINODIR)\/hardware\/arduino\/boards.txt$/;"	m
+BOARD_BOOTLOADER_PATH	Makefile	/^BOARD_BOOTLOADER_PATH := \\$/;"	m
+BOARD_BUILD_FCPU	Makefile	/^BOARD_BUILD_FCPU := \\$/;"	m
+BOARD_BUILD_MCU	Makefile	/^BOARD_BUILD_MCU := \\$/;"	m
+BOARD_BUILD_VARIANT	Makefile	/^BOARD_BUILD_VARIANT := \\$/;"	m
+BOARD_UPLOAD_PROTOCOL	Makefile	/^BOARD_UPLOAD_PROTOCOL := \\$/;"	m
+BOARD_UPLOAD_SPEED	Makefile	/^BOARD_UPLOAD_SPEED := \\$/;"	m
+BOARD_USB_PID	Makefile	/^BOARD_USB_PID := \\$/;"	m
+BOARD_USB_VID	Makefile	/^BOARD_USB_VID := \\$/;"	m
+CC	Makefile	/^CC := $(call findsoftware,avr-gcc)$/;"	m
+CPPDEPFLAGS	Makefile	/^CPPDEPFLAGS = -MMD -MP -MF .dep\/$<.dep$/;"	m
+CPPINOFLAGS	Makefile	/^CPPINOFLAGS := -x c++ -include $(ARDUINOCOREDIR)\/Arduino.h$/;"	m
+CXX	Makefile	/^CXX := $(call findsoftware,avr-g++)$/;"	m
+DEPFILES	Makefile	/^DEPFILES := $(patsubst %, .dep\/%.dep, $(SOURCES))$/;"	m
+INOFILE	Makefile	/^INOFILE := $(wildcard *.ino *.pde)$/;"	m
+LD	Makefile	/^LD := $(call findsoftware,avr-ld)$/;"	m
+LIBRARIES	Makefile	/^LIBRARIES := $(filter $(notdir $(wildcard $(addsuffix \/*, $(LIBRARYPATH)))), \\$/;"	m
+LIBRARYDIRS	Makefile	/^LIBRARYDIRS := $(foreach lib, $(LIBRARIES), \\$/;"	m
+LIBRARYPATH	Makefile	/^LIBRARYPATH ?= libraries libs $(SKETCHBOOKDIR)\/libraries $(ARDUINODIR)\/libraries$/;"	m
+OBJCOPY	Makefile	/^OBJCOPY := $(call findsoftware,avr-objcopy)$/;"	m
+OBJECTS	Makefile	/^OBJECTS := $(addsuffix .o, $(basename $(SOURCES)))$/;"	m
+PREFERENCES_FILE	Makefile	/^PREFERENCES_FILE := $(wildcard $(HOME)\/.arduino\/preferences.txt)$/;"	m
+SERIALDEV	Makefile	/^SERIALDEV := $(firstword $(wildcard \\$/;"	m
+SERIALDEVGUESS	Makefile	/^SERIALDEVGUESS := 0$/;"	m
+SERIALDEVGUESS	Makefile	/^SERIALDEVGUESS := 1$/;"	m
+SKETCHBOOKDIR	Makefile	/^SKETCHBOOKDIR := \\$/;"	m
+SOURCES	Makefile	/^SOURCES := $(INOFILE) \\$/;"	m
+STTYFARG	Makefile	/^STTYFARG := $(shell stty --help 2>&1 | \\$/;"	m
+TARGET	Makefile	/^TARGET := $(basename $(INOFILE))$/;"	m
+TARGET	Makefile	/^TARGET := $(if $(TARGET),$(TARGET),a.out)$/;"	m
+findsoftware	Makefile	/^findsoftware = $(firstword $(wildcard $(addsuffix \/$(1), $(AVRTOOLSPATH))))$/;"	m
